@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountSettingActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonGoBack"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button_go_back"
+        android:contentDescription="Go Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtViewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:text="Your Account"
+        android:textColor="#0A0A0B"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/txtViewAccount"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAccount"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtViewAccountUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Staff: Sample"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProfile" />
+
+    <TextView
+        android:id="@+id/txtViewAccountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="None Type"
+        app:layout_constraintStart_toStartOf="@+id/txtViewAccountUsername"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAccountUsername" />
+
+    <TextView
+        android:id="@+id/txtViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Gender"
+        android:textColor="#0A0A0B"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageViewProfile"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+
+    <RadioButton
+        android:id="@+id/radioButtonMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Male"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewGender"
+        app:layout_constraintStart_toEndOf="@+id/txtViewGender"
+        app:layout_constraintTop_toTopOf="@+id/txtViewGender" />
+
+    <RadioButton
+        android:id="@+id/radioButtonFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Female"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonMale"
+        app:layout_constraintTop_toTopOf="@+id/radioButtonMale" />
+
+    <TextView
+        android:id="@+id/txtViewFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Full Name"
+        android:textColor="#0A0A0B"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtViewGender"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewGender" />
+
+    <EditText
+        android:id="@+id/editTxtFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#B0BDBC"
+        android:contentDescription="Full Name"
+        android:ems="14"
+        android:inputType="textPersonName"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewFullName"
+        app:layout_constraintStart_toEndOf="@+id/txtViewFullName"
+        app:layout_constraintTop_toTopOf="@+id/txtViewFullName"
+        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck" />
+
+    <TextView
+        android:id="@+id/txtViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Username"
+        android:textColor="#0A0A0B"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtViewFullName"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewFullName" />
+
+    <EditText
+        android:id="@+id/editTxtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B0BDBC"
+        android:contentDescription="Username"
+        android:ems="14"
+        android:inputType="textPersonName"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewUsername"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtFullName"
+        app:layout_constraintTop_toTopOf="@+id/txtViewUsername"
+        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck" />
+
+    <TextView
+        android:id="@+id/txtViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Password"
+        android:textColor="#0A0A0B"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtViewUsername"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewUsername" />
+
+    <EditText
+        android:id="@+id/editTxtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B0BDBC"
+        android:contentDescription="Password"
+        android:ems="14"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtUsername"
+        app:layout_constraintTop_toTopOf="@+id/txtViewPassword"
+        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="199dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/custom_button"
+        android:text="Save changes"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewDeleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Delete Account"
+        android:textColor="#0A0A0B"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPassword" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDeleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Delete"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewDeleteAccount"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtPassword"
+        app:layout_constraintTop_toTopOf="@+id/txtViewDeleteAccount" />
+
+    <TextView
+        android:id="@+id/txtWarningDeleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This action can't be cancelled"
+        android:textColor="#D0342C"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxDeleteAccount"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDeleteAccount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

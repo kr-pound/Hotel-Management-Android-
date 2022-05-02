@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonReserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:contentDescription="Reservation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_reserve" />
+
+    <TextView
+        android:id="@+id/txtViewReserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reserve Room"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonReserve"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonReserve"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonReserve" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCheckout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/white"
+        android:contentDescription="Check out"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewReserve"
+        app:layout_constraintStart_toEndOf="@+id/txtViewReserve"
+        app:layout_constraintTop_toTopOf="@+id/txtViewReserve"
+        app:srcCompat="@drawable/menu_checkout" />
+
+    <TextView
+        android:id="@+id/txtViewCheckOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Out"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCheckout"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCheckout"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCheckout" />
+
+    <ImageView
+        android:id="@+id/imageViewRoomPreview"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtViewRoomPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Room"
+        android:textColor="#0A0A0B"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRoomPreview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRoomPreview"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewRoomPreview" />
+
+    <ImageButton
+        android:id="@+id/imageButtonArrowLeft"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="150dp"
+        android:background="@drawable/arrow_left"
+        android:contentDescription="Left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomPreview"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonArrowRight"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/arrow_right"
+        android:contentDescription="Right"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomPreview"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtViewPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomPreview" />
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtViewAccountUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Staff: Sample"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProfile" />
+
+    <TextView
+        android:id="@+id/txtViewAccountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="None Type"
+        app:layout_constraintStart_toStartOf="@+id/txtViewAccountUsername"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAccountUsername" />
+
+    <TextView
+        android:id="@+id/txtViewCustomizeRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Customize Room"
+        android:textSize="16dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/custom_button"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCustomizeRoom"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonCustomizeRoom"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCustomizeRoom" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCustomizeRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/white"
+        android:contentDescription="Customize Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/menu_customize_room"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

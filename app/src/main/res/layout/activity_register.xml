@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/textViewRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create An Account"
+        android:textColor="#0A0A0B"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.090" />
+
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Register your acccount"
+        android:textColor="#808080"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterTitle" />
+
+    <ImageView
+        android:id="@+id/imageViewPerson"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegister"
+        app:srcCompat="@drawable/login_person" />
+
+    <EditText
+        android:id="@+id/editTxtFullName"
+        android:layout_width="329dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#B0BDBC"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:maxLength="25"
+        android:textColorHint="#B0BDBC"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPerson"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPerson"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPerson"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageViewUsername"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPerson"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPerson"
+        app:srcCompat="@drawable/login_user" />
+
+    <EditText
+        android:id="@+id/editTxtUsername"
+        android:layout_width="329dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#B0BDBC"
+        android:hint="Username"
+        android:inputType="text"
+        android:maxLength="20"
+        android:textColorHint="#B0BDBC"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewUsername"
+        app:layout_constraintStart_toEndOf="@+id/imageViewUsername"
+        app:layout_constraintTop_toTopOf="@+id/imageViewUsername"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageViewPassword"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewUsername"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUsername"
+        app:srcCompat="@drawable/login_password" />
+
+    <EditText
+        android:id="@+id/editTxtPassword"
+        android:layout_width="329dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#B0BDBC"
+        android:hint="Password"
+        android:inputType="text"
+        android:maxLength="20"
+        android:textColorHint="#B0BDBC"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPassword"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPassword"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPassword"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Gender"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPassword" />
+
+    <RadioButton
+        android:id="@+id/radioButtonMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Male"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewGender"
+        app:layout_constraintStart_toEndOf="@+id/txtViewGender"
+        app:layout_constraintTop_toTopOf="@+id/txtViewGender" />
+
+    <RadioButton
+        android:id="@+id/radioButtonFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Female"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioButtonMale"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonMale"
+        app:layout_constraintTop_toTopOf="@+id/radioButtonMale" />
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="174dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/custom_button"
+        android:text="SIGN UP"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtPassword" />
+
+    <TextView
+        android:id="@+id/txtViewError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="No Problem"
+        android:textColor="#D0342C"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/txtViewGender"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewGender" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textColor="#808080"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90" />
+
+    <TextView
+        android:id="@+id/txtViewGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sign in"
+        android:textSize="18dp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/custom_button"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomListForCustomizeActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonGoBack"
+        android:layout_width="27dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button_go_back"
+        android:contentDescription="Go Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:contentDescription="Add Room"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRoomType"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerRoomType"
+        app:srcCompat="@drawable/menu_customize_room"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTxtAddRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/light_grey"
+        android:ems="10"
+        android:hint='Add "..." Type'
+        android:inputType="numberDecimal"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRoomType"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonEdit"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:contentDescription="Cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/editTxtAddRoom"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtAddRoom"
+        app:layout_constraintTop_toTopOf="@+id/editTxtAddRoom"
+        app:srcCompat="@drawable/customize_cancel"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerRoomType"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:entries="@array/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtViewRoomID1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="270dp"
+        android:text="ID: 0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerRoomType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spinnerRoomType"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRoomType" />
+
+    <TextView
+        android:id="@+id/txtViewRoomType1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None Type"
+        android:textColor="#0A0A0B"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID1"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID1" />
+
+    <TextView
+        android:id="@+id/txtViewRoomStatus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available"
+        android:textColor="#0A0A0B"
+        android:textSize="19dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomType1"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDelete1"
+        app:layout_constraintStart_toEndOf="@+id/txtViewRoomID1"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomID1" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:contentDescription="Delete Button"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomStatus1"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerRoomType"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomStatus1"
+        app:layout_constraintVertical_bias="0.59"
+        app:srcCompat="@drawable/customize_delete" />
+
+    <TextView
+        android:id="@+id/txtViewRoomID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ID: 0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID1"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID1"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID1" />
+
+    <TextView
+        android:id="@+id/txtViewRoomType2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None Type"
+        android:textColor="#0A0A0B"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID2"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID2"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID2" />
+
+    <TextView
+        android:id="@+id/txtViewRoomStatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available"
+        android:textColor="#0A0A0B"
+        android:textSize="19dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomType2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDelete2"
+        app:layout_constraintStart_toEndOf="@+id/txtViewRoomID2"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomID2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete2"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:contentDescription="Delete Button"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomStatus2"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDelete1"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomStatus2"
+        app:srcCompat="@drawable/customize_delete" />
+
+    <TextView
+        android:id="@+id/txtViewRoomID3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ID: 0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID2"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID2"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID2" />
+
+    <TextView
+        android:id="@+id/txtViewRoomType3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None Type"
+        android:textColor="#0A0A0B"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID3"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID3"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID3" />
+
+    <TextView
+        android:id="@+id/txtViewRoomStatus3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available"
+        android:textColor="#0A0A0B"
+        android:textSize="19dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomType3"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDelete3"
+        app:layout_constraintStart_toEndOf="@+id/txtViewRoomID3"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomID3" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete3"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:contentDescription="Delete Button"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomStatus3"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDelete2"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomStatus3"
+        app:srcCompat="@drawable/customize_delete" />
+
+    <TextView
+        android:id="@+id/txtViewRoomID4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ID: 0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID3"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID3"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID3" />
+
+    <TextView
+        android:id="@+id/txtViewRoomType4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None Type"
+        android:textColor="#0A0A0B"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID4"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID4"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID4" />
+
+    <TextView
+        android:id="@+id/txtViewRoomStatus4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available"
+        android:textColor="#0A0A0B"
+        android:textSize="19dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomType4"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDelete4"
+        app:layout_constraintStart_toEndOf="@+id/txtViewRoomID4"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomID4" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete4"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:contentDescription="Delete Button"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomStatus4"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDelete3"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomStatus4"
+        app:srcCompat="@drawable/customize_delete" />
+
+    <TextView
+        android:id="@+id/txtViewRoomID5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ID: 0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID4"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID4"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID4" />
+
+    <TextView
+        android:id="@+id/txtViewRoomType5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None Type"
+        android:textColor="#0A0A0B"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID5"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID5"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID5" />
+
+    <TextView
+        android:id="@+id/txtViewRoomStatus5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available"
+        android:textColor="#0A0A0B"
+        android:textSize="19dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomType5"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDelete5"
+        app:layout_constraintStart_toEndOf="@+id/txtViewRoomID5"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomID5" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete5"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:contentDescription="Delete Button"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomStatus5"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDelete4"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomStatus5"
+        app:srcCompat="@drawable/customize_delete" />
+
+    <TextView
+        android:id="@+id/txtViewRoomID6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ID: 0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID5"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID5"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID5" />
+
+    <TextView
+        android:id="@+id/txtViewRoomType6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None Type"
+        android:textColor="#0A0A0B"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewRoomID6"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRoomID6"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRoomID6" />
+
+    <TextView
+        android:id="@+id/txtViewRoomStatus6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available"
+        android:textColor="#0A0A0B"
+        android:textSize="19dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomType6"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonDelete6"
+        app:layout_constraintStart_toEndOf="@+id/txtViewRoomID6"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomID6" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete6"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:contentDescription="Delete Button"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRoomStatus6"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDelete5"
+        app:layout_constraintTop_toTopOf="@+id/txtViewRoomStatus6"
+        app:srcCompat="@drawable/customize_delete" />
+
+    <ImageButton
+        android:id="@+id/imageButtonArrowLeftCustomize"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/arrow_left"
+        android:contentDescription="Left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.967"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonArrowRightCustomize"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/arrow_right"
+        android:contentDescription="Right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.967"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtViewPageCustomize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#0A0A0B"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

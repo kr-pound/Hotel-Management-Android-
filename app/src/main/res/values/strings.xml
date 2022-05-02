@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Hotel Management</string>
+
+    <string-array name="list">
+        <item>Standard</item>
+        <item>Deluxe</item>
+        <item>Joint</item>
+        <item>Accessible</item>
+        <item>Suite</item>
+        <item>Apartment Style</item>
+        <item>Connecting</item>
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "767974964824",
+    "project_id": "hotelmanagement-d71e4",
+    "storage_bucket": "hotelmanagement-d71e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767974964824:android:0b223042bf9ac6854e942d",
+        "android_client_info": {
+          "package_name": "com.example.hotelmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767974964824-e4ruhu45k29p7moq896pkunf7rdqa58p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGZRcBkyXikrV769yo_lrQ9qos6hqRMB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767974964824-e4ruhu45k29p7moq896pkunf7rdqa58p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
